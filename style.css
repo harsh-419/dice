@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body{
+	 font-family: 'Nunito', sans-serif;
+	 text-transform: uppercase;
+}
+main{
+	min-height: 100vh;
+	background: linear-gradient(to right top, #6cdbeb, #7534C3,#6cdbeb);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+.cont{
+	position: absolute;
+	background: white;
+	min-height: 80vh;
+	width: 70%;
+	background: linear-gradient(to right bottom, rgba(255,255,255,0.6),rgba(255,255,255,0.4));
+	border-radius: 1rem;
+	display: flex;
+	flex-direction:row;
+	justify-content: center;
+	align-items: center;
+	
+
+}
+
+.player,.reset{
+	transition: all 0.75s;
+	min-height: 70vh;
+	border-radius: 1.5rem;
+}
+.player--0{margin: 40px 0px 40px 25px;
+	background: linear-gradient(to  bottom, rgba(211,211,211,0.4),rgba(111,111,111, 0.7));
+	flex: 2;
+
+
+}
+.player--1{
+	margin: 40px 25px 40px 0px;
+	background: linear-gradient(to  bottom, rgba(211,211,211,0.4),rgba(111,111,111, 0.7));
+	flex: 2;
+
+}
+.reset{
+	position: relative;
+
+	margin: 40px 15px 40px 15px;
+	background: none;
+	flex: 1.5;
+}
+.name {
+	text-align: center;
+  position: relative;
+  font-size: 3rem;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-weight: 400;
+  margin-top: 1rem;
+}
+
+.score {
+	margin-top: 25px;
+	text-align: center;
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: rgba(255, 0, 50, 1);
+  margin-bottom: auto;
+}
+.current {
+	margin: auto;
+	margin-top: 70px;
+  background-color:  rgba(255, 0, 50, 1);
+  opacity: 0.8;
+  border-radius: 9px;
+  color: #fff;
+  width: 60%;
+  padding: 0.8rem;
+  text-align: center;
+  transition: all 1.75s;
+}
+
+.current-label {
+  margin-bottom: 0.8rem;
+  font-size: 1.5rem;
+  color: #ddd;
+}
+
+.current-score {
+  font-size: 2.3rem;
+}
+.all{
+ align-items: center;
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+}
+.btn{
+	position: absolute;
+	color: #444;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: 650;
+  transition: all 0.2s;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 0.7rem 2rem;
+  border-radius: 50rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+
+}
+
+.btn:hover{
+	text-shadow: 0px 1px #000;
+}
+
+.btn--new {
+  	padding: 0.7rem 2.5rem;
+  top: 0.3em;
+}
+.btn--roll {
+  top: 16em;
+}
+.btn--hold {
+  top: 20em;
+}
+.btn:active {
+  transform: translate(0, 4px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+.win{
+  color: #444;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px dashed red;
+  	border-radius: 20rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 900;
+  	top: 4.5em;
+  	position:  relative;
+  	text-align: center;
+  	padding: 12px 3px;
+}
+.win:focus{
+
+	outline: none;
+}
+.player--winner  {
+  background:  rgba(255, 240,250, 1.0);
+}
+
+.player--winner .name {
+  font-weight: 700;
+  color: rgba(255, 0, 50, 1);
+}
+.dice {
+	position: absolute;
+	top: 36%;
+	left: 44%;
+	width: 6em;
+	height: 6em;
+	z-index: 2;
+
+}
+
+.player--active {
+	background: linear-gradient(to right bottom, rgba(222,222,222,0.6),rgba(255,255,255,0.4));
+}
+.player--active .name {
+  font-weight: 600;
+}
+.player--active .score {
+  font-weight: 400;
+}
+
+.player--active .current {
+  transition: all 2.75s;
+
+  opacity: 1;
+}
+
+
+@media screen and (max-width : 1070px)
+{
+	.cont{
+	width: 76%;
+	}
+	.name{
+		font-size: 2.2rem;
+	}
+	.current-label {
+  font-size: 1.3rem;
+}
+
+.current-score {
+  font-size: 2rem;
+}
+
+.score {
+	margin-top: 35px;
+	}
+	.btn{
+		padding: 0.6rem 1.5rem;
+	}
+	.win{
+  	padding: 11px 2px;
+	}
+}
+
+@media screen and (max-width : 900px)
+{	
+	
+	.cont{
+	min-height: 70vh;
+
+	width: 80%;
+	}
+	.name{
+		font-size: 1.8rem;
+	}
+	.current-label {
+  font-size: 1rem;
+}
+
+.current-score {
+  font-size: 1.8rem;
+}
+
+.player,.reset{
+	min-height: 60vh;
+}
+
+.score {
+	margin-top: 50px;
+	}
+	.btn{
+		padding: 0.5rem 1.2rem;
+	}
+	.win{
+  	padding: 10px 1px;
+  font-size: 0.9rem;
+
+	}	
+.dice{
+	top: 34%;
+	left: 42%;
+}
+}
+
+@media screen and (max-width : 700px)
+{	
+	
+	.cont{
+	width: 85%;
+	}
+	.name{
+		font-size: 1.5rem;
+	}
+	.current-label {
+  font-size: 0.8rem;
+}
+
+.current-score {
+  font-size: 1.5rem;
+}
+.player,.reset{
+	min-height: 55vh;
+}
+
+.score {
+	margin-top: 60px;
+	}
+	.btn{
+		padding: 0.4rem 0.7rem;
+		font-size: 0.9rem;
+	}
+	.win{
+  	padding: 8px 1px;
+  font-size: 0.7rem;
+
+	}	
+.dice{
+	top: 32%;
+}
+	}
+
+@media screen and (max-width : 570px)
+{
+.cont{
+	min-height: 60vh;
+	width: 90%;
+}
+
+	.name{
+		font-size: 1.3rem;
+	}
+	.current-label {
+  font-size: 0.7rem;
+}
+
+.current-score {
+  font-size: 1.3rem;
+}
+.player,.reset{
+	min-height: 45vh;
+}
+
+	.btn{
+		padding: 0.4rem 0.7rem;
+		font-size: 0.8rem;
+	}
+	.win{
+  	padding: 8px 1px;
+  font-size: 0.6rem;
+
+	}	
+.dice{
+	left: 44%;
+		width: 4em;
+	height: 4em;
+}
+
+
+}
+
+@media screen and (max-width : 470px)
+{
+.cont{
+	min-height: 55vh;
+	width: 95%;
+}
+
+	.name{
+		font-size: 1.1rem;
+	}
+	.current-label {
+  font-size: 0.5rem;
+}
+.current{	margin: 1.5rem ;
+	margin-top: 2.5rem;
+}
+.current-score {
+  font-size: 1.1rem;
+}
+.player,.reset{
+	min-height: 40vh;
+}
+
+	.btn{
+		padding: 0.3rem 0.5rem;
+		font-size: 0.7rem;
+	}
+	.win{
+  	padding: 6px 1px;
+  font-size: 0.5rem;
+
+	}	
+.dice{
+	left: 44%;
+		width: 3.5em;
+	height: 3.5em;
+}
+
+}
+
+
+@media screen and (max-width : 370px)
+{
+
+.cont{
+	min-height: 50vh;
+	width: 97%;
+}
+
+
+	.name{
+		font-size: 0.9rem;
+	}
+	.current-label {
+  font-size: 0.4rem;
+}
+.current{	margin: 1.5rem ;
+}
+.current-score {
+  font-size: o.9rem;
+}
+
+.score {
+	margin-top: 40px;
+	}
+.player,.reset{
+	width: 6em;
+	min-height: 30vh;
+}
+
+	.btn{
+		padding: 0.3rem 0.3rem;
+		font-size: 0.6rem;
+	}
+	.win{
+  	padding: 6px 1px;
+  font-size: 0.4rem;
+  	top: 4.9em;
+
+
+	}	
+.dice{
+	top: 38%;
+
+	left: 42%;
+		width: 3.5em;
+	height: 3.5em;
+}
+
+}
