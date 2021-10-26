@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body{
+	 font-family: 'Nunito', sans-serif;
+	 text-transform: uppercase;
+	background: linear-gradient(to right top, #6cdbeb, #7534C3,#6cdbeb);
+	min-height: 100vh;
+
+}
+.header{
+	font-size: 1.6em;
+	padding: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+main{
+	margin-top: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	
+}
+.cont{
+	position: relative;
+	min-height: 63vh;
+	width: 78%;
+
+	border-radius: 1rem;
+	display: flex;
+	flex-direction:column;
+	text-align: center;
+	justify-content: center;
+}
+.rule{
+	margin-bottom: 10px;
+	text-align: left;
+	color: #000;
+	 font-size: 1.3rem;
+  cursor: default;
+  font-weight: 750;
+	font-family: sans-serif;
+  transition: all 0.2s;
+	background-color: rgba(255, 255, 255, 0.5);
+	  padding: 0.4rem 2rem;
+  border-radius: 50rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+.btn{
+	position: absolute;
+	 transform: translateX(-50%);
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-weight: 650;
+  transition: all 0.2s;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 0.7rem 2rem;
+  border-radius: 50rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+
+}
+
+.btn:hover{
+	text-shadow: 0px 1px #000;
+}
+.btn:active {
+  transform: translate(-50%, 3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (max-width: 750px)
+{
+	.rule{
+		
+		font-size: 1rem;
+
+	}
+}
+
+@media screen and (max-width: 480px)
+{
+
+.header{
+	font-size: 1.2em;
+	padding: 15px;
+	padding-top: 25px;
+	}
+	img{
+		width: 3em;
+	}
+
+.cont{
+	min-height: 60vh;
+	width: 70%;
+}
+.rule{
+	margin-bottom: 10px;
+	 font-size: 0.8rem;
+  font-weight: 600;
+	padding: 0.4rem 0.9rem;
+}
+
+}
+
+@media screen and (max-width: 400px)
+{
+.rule{
+	margin-bottom: 10px;
+	 font-size: 0.7rem;
+	}
+	.btn{
+		padding: 0.6rem 1rem;
+		font-size: 1rem;
+	}
+}
