@@ -73,8 +73,11 @@ document.querySelector('.btn--hold').addEventListener('click', function (){
 
 document.querySelector('#name--' + active).textContent = 'Winner';
 		document.querySelector('.dice').style.display = 'none';
-		document.querySelector('.player--'+ active).classList.add('player--winner');
-		document.querySelector('.player--'+ active).classList.remove('player--active');
+
+document.getElementById('current--1').textContent = '0';
+
+			document.querySelector('.player--0').classList.toggle('player--active');
+			document.querySelector('.player--1').classList.toggle('player--active');
 
 
 function next()
