@@ -19,12 +19,7 @@ main{
 }
 .cont{
 	position: absolute;
-	background: white;
-	min-height: 80vh;
-	width: 70%;
-	background: linear-gradient(to right bottom, rgba(255,255,255,0.6),rgba(255,255,255,0.4));
-	border-radius: 1rem;
-	display: flex;
+	
 	flex-direction:row;
 	justify-content: center;
 	align-items: center;
@@ -51,7 +46,13 @@ main{
 }
 .reset{
 	position: relative;
-
+margin: auto;
+	margin-top: 70px;
+  background-color:  rgba(255, 0, 50, 1);
+  opacity: 0.8;
+  border-radius: 9px;
+  color: #fff;
+	
 	margin: 40px 15px 40px 15px;
 	background: none;
 	flex: 1.5;
@@ -65,7 +66,27 @@ main{
   font-weight: 400;
   margin-top: 1rem;
 }
+nav{
+	margin-top: 40px;
+	border: 2px solid #F3BA00;
+	border-radius: 10px;
+	width: 690px;
+}
+.offer{
+	height: 40px;
+	line-height: 40px;
+	align-items: center;
+	justify-content: space-between ;
 
+}
+nav ul li{
+	display: inline-block;
+	color: #929292;
+	padding: 0 20px;
+	border-right: 2px solid #F3BA00;
+	padding: 0 40px;
+
+}
 .score {
 	margin-top: 25px;
 	text-align: center;
@@ -75,12 +96,12 @@ main{
   margin-bottom: auto;
 }
 .current {
-	margin: auto;
-	margin-top: 70px;
-  background-color:  rgba(255, 0, 50, 1);
-  opacity: 0.8;
-  border-radius: 9px;
-  color: #fff;
+	background: white;
+	min-height: 80vh;
+	width: 70%;
+	background: linear-gradient(to right bottom, rgba(255,255,255,0.6),rgba(255,255,255,0.4));
+	border-radius: 1rem;
+	display: flex;
   width: 60%;
   padding: 0.8rem;
   text-align: center;
@@ -145,10 +166,7 @@ main{
   font-family: inherit;
   font-size: 1rem;
   font-weight: 900;
-  	top: 4.5em;
-  	position:  relative;
-  	text-align: center;
-  	padding: 12px 3px;
+  	 	padding: 12px 3px;
 }
 .win:focus{
 
@@ -184,7 +202,11 @@ main{
 
 .player--active .current {
   transition: all 2.75s;
-
+top: 36%;
+	left: 44%;
+	width: 6em;
+	height: 6em;
+	z-index: 2;
   opacity: 1;
 }
 
@@ -221,7 +243,10 @@ main{
 	
 	.cont{
 	min-height: 70vh;
-
+top: 4.5em;
+  	position:  relative;
+  	text-align: center;
+ 
 	width: 80%;
 	}
 	.name{
